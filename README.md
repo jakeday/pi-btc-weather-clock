@@ -3,7 +3,7 @@
 
 Want a spiffy display that tells you the time, weather and bitcoin price? Got an extra RaspBerry Pi laying around? Let's do this!
 
-![alt text](https://drive.google.com/file/d/0B1eHMO4u1XzKcWZqekUxRTdoTnM/view?usp=sharing "Pi BTC Weather Clock")
+![alt text](http://s32.postimg.org/5ffoae6xx/pibtcweatherclock.png "Pi BTC Weather Clock")
 
 * * *
 
