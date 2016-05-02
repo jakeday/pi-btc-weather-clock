@@ -3,6 +3,8 @@
 
 Want a spiffy display that tells you the time, weather and bitcoin price? Got an extra RaspBerry Pi laying around? Let's do this!
 
+Note: This project will change background colors on the span of a few minutes, as well as slightly zoom in and out the display a little. This is both for effect and to prevent burn-in.
+
 ![alt text](http://s32.postimg.org/5ffoae6xx/pibtcweatherclock.png "Pi BTC Weather Clock")
 
 * * *
