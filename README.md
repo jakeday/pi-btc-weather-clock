@@ -155,3 +155,5 @@ Time formatting by [Moment.js](http://momentjs.com/)
 Weather data retrieved using Yahoo! Weather API.
 
 Project is a cleaned up, slimmed down, and enhanced version of Pi Kitchen Dashboard (https://github.com/userexec/Pi-Kitchen-Dashboard).
+
+Bitcoin donations appreciated! 1JkpbAJ41W6SUjH9vCRDpHNNpecjPK3Zid
