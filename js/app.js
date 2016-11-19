@@ -23,7 +23,7 @@
 	var zoom = 1.0;
 
 	// Locale
-	var systemLocale = 'pl';
+	var systemLocale = 'en';
 	
 	// Time format from moment library
 	var timeFormat = 'LTS';
@@ -32,7 +32,7 @@
 	var dateFormat = 'LL';
 	
 	// Should we show BTC
-	var showBtc = false;
+	var showBtc = true;
 
 	/*
 	 * END CONFIG VARIABLES
