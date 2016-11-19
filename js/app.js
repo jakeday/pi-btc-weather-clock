@@ -22,13 +22,13 @@
 	// Default zoom level. Transitions from 0.9 to 1.1 (90% to 110%)
 	var zoom = 1.0;
 
-	// Locale
+	// Locale (http://momentjs.com/)
 	var systemLocale = 'en';
 	
-	// Time format from moment library
+	// Time format from moment library (http://momentjs.com/)
 	var timeFormat = 'LTS';
 	
-	// Date format from moment library
+	// Date format from moment library (http://momentjs.com/)
 	var dateFormat = 'LL';
 	
 	// Should we show BTC
