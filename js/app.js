@@ -22,9 +22,23 @@
 	// Default zoom level. Transitions from 0.9 to 1.1 (90% to 110%)
 	var zoom = 1.0;
 
+	// Locale (http://momentjs.com/)
+	var systemLocale = 'en';
+	
+	// Time format from moment library (http://momentjs.com/)
+	var timeFormat = 'LTS';
+	
+	// Date format from moment library (http://momentjs.com/)
+	var dateFormat = 'LL';
+	
+	// Should we show BTC
+	var showBtc = true;
+
 	/*
 	 * END CONFIG VARIABLES
 	 */
+
+	moment.locale(systemLocale);
 
 	function resolveTemp(temp) {
 		if (unit === 'c' || unit === 'C')
@@ -105,30 +119,34 @@
 
 	$(window).load(function() {
 		if ($('#time').length)
-			$('#time').html(moment().format('h:mm:ss a'));
+			$('#time').html(moment().format(timeFormat));
 
 		if ($('#date').length)
-			$('#date').html(moment().format('dddd, MMMM Do'));
+			$('#date').html(moment().format(dateFormat));
 
 		queryWeather();
 
-		queryBtcPrice();
+		if (showBtc) {
+			queryBtcPrice();
+		}
 
 		setInterval(function() {
 			if ($('#time').length)
-				$('#time').html(moment().format('h:mm:ss a'));
+				$('#time').html(moment().format(timeFormat));
 
 			if ($('#date').length)
-				$('#date').html(moment().format('dddd, MMMM Do'));
+				$('#date').html(moment().format(dateFormat));
 		}, 1000);
 
 		setInterval(function() {
 			queryWeather();
 		}, waitBetweenWeatherQueries);
 
-		setInterval(function() {
-			queryBtcPrice();
-		}, waitBetweenBitcoinPriceQueries);
+		if (showBtc) {
+			setInterval(function() {
+				queryBtcPrice();
+			}, waitBetweenBitcoinPriceQueries);
+		}
 
 		setInterval(function() {
 			if (zoom == 1.0)
