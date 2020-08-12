@@ -6,8 +6,8 @@
 	 */
 
 	// Yahoo WOEID code
-	// Find your WOEID code at http://zourbuth.com/tools/woeid/
-	var woeid = 12774129;
+	// Find your WOEID code at https://www.findmecity.com/
+	var woeid = 2459115;
 	
 	// Your temperature unit measurement
 	// 'c' for Celcius, and 'f' for Fahrenheit
@@ -103,9 +103,12 @@
 	function queryWeather() {
 		$.ajax({
 			type: 'GET',
-			url: 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%3D' + woeid + '&format=json',
+			url: 'https://www.metaweather.com/api/location/' + woeid,
 			dataType: 'json'
 		}).done(function (result) {
+
+			console.log(result);
+
 			result = result.query.results.channel.item;
 
 			populateCurrent(result.condition);
