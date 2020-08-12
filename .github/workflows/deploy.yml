@@ -1,0 +1,21 @@
+name: Deploy to Host Server
+on: push
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
+        ref: 'master'
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
+      with:
+         key: ${{ secrets.SSH_PRIVATE_KEY }}
+         known_hosts: ${{ secrets.KNOWN_HOSTS }}
+    - run: |
+        git remote add hostserver ssh://jake@ninebysix.com/home/jake/pi-btc-weather-clock.git
+        git config --global user.email "deploy@ninebysix.com"
+        git config --global user.name "Nine by Six Deploy"
+        git checkout master
+        git push -u hostserver master
